@@ -1,0 +1,264 @@
+html{
+  height:100%;
+  background:linear-gradient(rgba(0, 0, 0, 0.62),rgba(0, 0, 0, 0.62)),url('cam.jpg');
+  /*background-image: url(cam.jpg);*/
+  /*filter:brightness(40%);*/
+    background-attachment: fixed ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.toggle-container {
+  text-align: center;
+  padding: 25px;
+}
+
+.toggle-container label{
+  color:white;
+  font-size:16px;
+}
+
+label{
+  color:white;
+}
+
+.searchh{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px;
+}
+
+#searchContainer {
+
+  padding: 10px;
+  width:100%;
+  max-width:765px;
+  max-height:30px;
+  background:rgba(255,255,255,0.2);
+  border:2px solid rgba(255, 255, 255, .5);
+  backdrop-filter:blur(3px);
+  box-shadow:0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius:60px;
+  padding:10px 15px 10px 15px;
+  align-items:center;
+}
+
+#searchContainer input{
+  flex:1;
+  background:transparent;
+  border:0;
+  outline:none;
+  font-size:20px;
+  color:#cac7ff;
+  margin-right:20px;
+}
+#searchContainer button {
+  margin-left:457px;
+  border:0;
+  border-radius:50%;
+  background:transparent;
+  cursor:pointer;
+}
+#searchContainer button img{
+  width:20px;
+ }
+
+
+
+#formFilterContainer{
+  margin-top:-10;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  margin-left:30;
+}
+
+.movie-form{
+  
+  margin-left:550px;
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(3px);
+  /*height:100%;*/
+  max-width:740px;
+  max-height:500px;
+  padding:15px 20px 15px 20px;
+  border-radius:20px;
+  border:2px solid rgba(255, 255, 255, .5);
+  box-shadow:0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.row1{
+  display:flex;
+  flex-direction:row;
+  
+}
+
+.row2{
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-end;
+  align-items:flex-end;
+  margin-top:15px;
+}
+
+label{
+  font-size:22px;
+  
+}
+
+.sgenre{
+  display:inline-block;
+  margin-left:7px;
+}
+
+.year{
+  margin-left:15px;
+}
+
+.rating{
+  margin-left:15px;
+}
+
+select{
+  padding:0.5px;
+  font-size:20px; 
+  border-radius:9px;
+  background:transparent;
+  border-color:white;
+  border:2px solid rgba(255, 255, 255, .5);
+  color:white;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input#from-year,#to-year,#from-rating,#to-rating{
+  width:65px;
+  padding:0.5px 0 0.5px 15px ;
+  font-size:19px;
+  margin-left:7px;
+  /*opacity: 0.8;*/
+    border-radius:9px;
+    background:transparent;
+    /*border-width:4px;*/
+    border:2px solid rgba(255, 255, 255, .5);
+    color:white;
+  
+}
+
+input#from-rating,#to-rating{
+  width:40px;
+}
+
+button#reset,#submit{
+  padding:0.5px 4px 0.5px 4px;
+  font-size:20px;
+  border-radius:9px;
+  border-color:white;
+  background:transparent;
+  border:2px solid rgba(255, 255, 255, .5);
+  color:white;
+}
+
+.submit{
+  padding:0.5px 4px 0.5px 4px;
+  font-size:20px;
+  border-radius:9px;
+  border-color:white;
+  background:transparent;
+  border:2px solid rgba(255, 255, 255, .5);
+  color:white;
+  margin-left:15px;
+}
+
+button#reset{
+  margin-right:10px;
+}
+
+.buttons{
+  margin-left:200px;
+}
+
+
+
+
+/*output of recommendation*/
+.movies-container {
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(3px);
+  padding:15px 20px 15px 20px;
+  border-radius:20px;
+  border:2px solid rgba(255, 255, 255, .5);
+  box-shadow:0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  color:white;
+}
+
+.movie {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
+  color:white;
+}
+
+movie img {
+  max-width:100px;
+  width:100px;
+  height: 100;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-info h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.movie-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.movie-info p.rating {
+  color: #007bff;
+}
+
+.movie-info p.director {
+  font-weight: bold;
+}
+
+.movie-info p.genres {
+  font-style: italic;
+}
+
+#movie-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+
+
+
+
+
+
+

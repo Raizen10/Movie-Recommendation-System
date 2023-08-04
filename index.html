@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Recommendation App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="toggle-container">
+    <label for="mode-select">Select Mode:</label>
+    <select id="mode-select" name="mode">
+      <option value="recommendation">Movie Recommendation</option>
+      <option value="form-filter">Form Filter</option>
+    </select>
+  </div>
+  <div class="searchh">
+  <div id="searchContainer">
+    <input type="text" id="inputMovie" placeholder="Enter a movie title">
+    <button type="button" id="searchButton"><img src="search.png"></button>
+  </div>
+  </div>
+  <main>
+    <div id="recommendedMovies" class="movies-container"></div>
+
+    <div id="formFilterContainer">
+      <form id="movie-form" class="movie-form" method="post" onsubmit="return false;">
+        <div class="row1">
+          <div class="genre">
+            <label for="genre">Genre:</label>
+            <div class="sgenre">
+              <select id="genre" name="genre">
+                <option value="28">Action</option>
+                <option value="12">Adventure</option>
+                <option value="35">Comedy</option>
+                <option value="80">Crime</option>
+                <option value="18">Drama</option>
+                <option value="14">Fantasy</option>
+                <option value="878">Fiction</option>
+                <option value="27">Horror</option>
+                <option value="9648">Mystery</option>
+                <option value="10749">Romance</option>
+              </select>
+            </div>
+          </div>
+          <div class="year">
+            <label for="from-year">Year:</label> 
+            <input type="number" id="from-year" name="from-year" min="1950" max="2023" placeholder="1950" required>
+            <label for="to-year">to</label>
+            <input type="number" id="to-year" name="to-year" min="1950" max="2023" placeholder="2023" required>
+          </div>
+          <div class="rating">
+            <label for="from-rating">Rating:</label>
+            <input type="number" id="from-rating" name="from-rating" min="1" max="10" placeholder="1" required>
+            <label for="to-rating">to</label>
+            <input type="number" id="to-rating" name="to-rating" min="1" max="10" placeholder="10" required>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="buttons">
+            <button type="reset" id="reset" name="reset">Reset</button>
+            <button type="button" id="applyFilter" class="submit">Apply</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="movie-list"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
