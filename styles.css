@@ -1,12 +1,12 @@
-html{
-  height:100%;
-  background:linear-gradient(rgba(0, 0, 0, 0.62),rgba(0, 0, 0, 0.62)),url('cam.jpg');
-  /*background-image: url(cam.jpg);*/
-  /*filter:brightness(40%);*/
-    background-attachment: fixed ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+/* Global styles */
+html {
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
+    url("cam.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 body {
@@ -15,208 +15,141 @@ body {
   padding: 0;
 }
 
-.toggle-container {
+/* Common styles for search and form filter */
+.toggle-container,
+.movie-form {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  padding: 15px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  max-width: 800px;
   text-align: center;
-  padding: 25px;
+  color: white;
 }
 
-.toggle-container label{
-  color:white;
-  font-size:16px;
+/* Search section */
+.toggle-container label {
+  color: white;
+  font-size: 16px;
 }
 
-label{
-  color:white;
-}
-
-.searchh{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:15px;
+.searchh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
 #searchContainer {
-
+  display: flex;
+  align-items: center;
   padding: 10px;
-  width:100%;
-  max-width:765px;
-  max-height:30px;
-  background:rgba(255,255,255,0.2);
-  border:2px solid rgba(255, 255, 255, .5);
-  backdrop-filter:blur(3px);
-  box-shadow:0 0 20px rgba(0, 0, 0, 0.5);
-  border-radius:60px;
-  padding:10px 15px 10px 15px;
-  align-items:center;
+  max-width: 765px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 60px;
 }
 
-#searchContainer input{
-  flex:1;
-  background:transparent;
-  border:0;
-  outline:none;
-  font-size:20px;
-  color:#cac7ff;
-  margin-right:20px;
+#searchContainer input {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  outline: none;
+  font-size: 20px;
+  color: #cac7ff;
+  margin-right: 20px;
 }
+
 #searchContainer button {
-  margin-left:457px;
-  border:0;
-  border-radius:50%;
-  background:transparent;
-  cursor:pointer;
-}
-#searchContainer button img{
-  width:20px;
- }
-
-
-
-#formFilterContainer{
-  margin-top:-10;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:center;
-  margin-left:30;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
 }
 
-.movie-form{
-  
-  margin-left:550px;
-  background:rgba(255,255,255,0.2);
-  backdrop-filter:blur(3px);
-  /*height:100%;*/
-  max-width:740px;
-  max-height:500px;
-  padding:15px 20px 15px 20px;
-  border-radius:20px;
-  border:2px solid rgba(255, 255, 255, .5);
-  box-shadow:0 0 20px rgba(0, 0, 0, 0.5);
+/* Form filter section */
+#formFilterContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.row1{
-  display:flex;
-  flex-direction:row;
-  
+.row1,
+.row2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
 }
 
-.row2{
-  display:flex;
-  flex-direction:row;
-  justify-content:flex-end;
-  align-items:flex-end;
-  margin-top:15px;
+label {
+  font-size: 22px;
+  margin-right: 5px;
 }
 
-label{
-  font-size:22px;
-  
+.sgenre {
+  margin-left: 7px;
 }
 
-.sgenre{
-  display:inline-block;
-  margin-left:7px;
+.year,
+.rating {
+  margin-left: 15px;
 }
 
-.year{
-  margin-left:15px;
+select,
+input[type="number"],
+button#reset,
+button#submit {
+  padding: 0.5px 4px;
+  font-size: 20px;
+  border-radius: 9px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  background: transparent;
 }
 
-.rating{
-  margin-left:15px;
+input#from-year,
+#to-year,
+#from-rating,
+#to-rating {
+  width: 65px;
+  padding-left: 15px;
 }
 
-select{
-  padding:0.5px;
-  font-size:20px; 
-  border-radius:9px;
-  background:transparent;
-  border-color:white;
-  border:2px solid rgba(255, 255, 255, .5);
-  color:white;
+input#from-rating,
+#to-rating {
+  width: 40px;
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
+.buttons {
+  margin-left: 200px;
 }
 
-input#from-year,#to-year,#from-rating,#to-rating{
-  width:65px;
-  padding:0.5px 0 0.5px 15px ;
-  font-size:19px;
-  margin-left:7px;
-  /*opacity: 0.8;*/
-    border-radius:9px;
-    background:transparent;
-    /*border-width:4px;*/
-    border:2px solid rgba(255, 255, 255, .5);
-    color:white;
-  
-}
-
-input#from-rating,#to-rating{
-  width:40px;
-}
-
-button#reset,#submit{
-  padding:0.5px 4px 0.5px 4px;
-  font-size:20px;
-  border-radius:9px;
-  border-color:white;
-  background:transparent;
-  border:2px solid rgba(255, 255, 255, .5);
-  color:white;
-}
-
-.submit{
-  padding:0.5px 4px 0.5px 4px;
-  font-size:20px;
-  border-radius:9px;
-  border-color:white;
-  background:transparent;
-  border:2px solid rgba(255, 255, 255, .5);
-  color:white;
-  margin-left:15px;
-}
-
-button#reset{
-  margin-right:10px;
-}
-
-.buttons{
-  margin-left:200px;
-}
-
-
-
-
-/*output of recommendation*/
+/* Output of recommendation and form filter */
 .movies-container {
-  background:rgba(255,255,255,0.2);
-  backdrop-filter:blur(3px);
-  padding:15px 20px 15px 20px;
-  border-radius:20px;
-  border:2px solid rgba(255, 255, 255, .5);
-  box-shadow:0 0 20px rgba(0, 0, 0, 0.5);
-  max-width: 800px;
+  max-width: 1000px;
   margin: 20px auto;
-  text-align: center;
-  color:white;
+  text-align: left; /* Align movie details to the left */
+  color: white;
 }
 
 .movie {
   display: flex;
+  align-items: flex-start; /* Align items to the top */
   margin-bottom: 20px;
   padding: 10px;
-  color:white;
+  color: white;
 }
 
-movie img {
-  max-width:100px;
-  width:100px;
-  height: 100;
+.movie-img {
+  max-width: 120px; /* Adjust the size of the movie images */
+  height: auto; /* Keep the aspect ratio of the images */
   margin-right: 20px;
   border-radius: 5px;
 }
@@ -226,7 +159,7 @@ movie img {
 }
 
 .movie-info h2 {
-  margin: 0;
+  margin: 20px;
   font-size: 20px;
 }
 
@@ -254,11 +187,19 @@ movie img {
   gap: 20px;
 }
 
-
-
-
-
-
-
-
-
+/* Adjustments for mobile devices */
+@media (max-width: 768px) {
+  .row1,
+  .row2 {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .buttons {
+    margin-left: 0;
+  }
+  .toggle-container,
+  .movie-form,
+  .movies-container {
+    max-width: 100%;
+  }
+}
