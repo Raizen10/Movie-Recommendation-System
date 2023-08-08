@@ -47,7 +47,7 @@ body {
   display: flex;
   align-items: center;
   padding: 10px;
-  max-width: 765px;
+  max-width: 100%; /* Set the width to 100% */
   height: 30px;
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -57,7 +57,7 @@ body {
 }
 
 #searchContainer input {
-  flex: 1;
+  width: 600px; /* Set the width to 100% */
   background: transparent;
   border: 0;
   outline: none;
@@ -76,21 +76,26 @@ body {
 /* Form filter section */
 #formFilterContainer {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: center; /* Center-align the form */
 }
 
 .row1,
 .row2 {
   display: flex;
   flex-direction: row;
+  align-items: center; /* Center-align the items within each row */
   margin-top: 15px;
 }
 
 label {
   font-size: 22px;
-  margin-right: 5px;
+  margin-right: 10px;
+}
+
+.genre {
+  display: flex;
+  align-items: center; /* Center-align items within the genre container */
 }
 
 .sgenre {
@@ -103,7 +108,10 @@ label {
 }
 
 select,
-input[type="number"],
+input[type="number"] {
+  -moz-appearance: testfield;
+}
+,
 button#reset,
 button#submit {
   padding: 0.5px 4px;
@@ -135,22 +143,23 @@ input#from-rating,
 .movies-container {
   max-width: 1000px;
   margin: 20px auto;
-  text-align: left; /* Align movie details to the left */
   color: white;
 }
 
 .movie {
-  display: flex;
-  align-items: flex-start; /* Align items to the top */
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   padding: 10px;
   color: white;
+  display: flex;
+  flex-direction: column; /* Stack movie info vertically */
+  align-items: center; /* Center-align movie details */
+  text-align: center; /* Center-align text within movie details */
 }
 
 .movie-img {
-  max-width: 120px; /* Adjust the size of the movie images */
+  max-width: 200px; /* Adjust the size of the movie images */
   height: auto; /* Keep the aspect ratio of the images */
-  margin-right: 20px;
+  margin: 0 auto 10px;
   border-radius: 5px;
 }
 
@@ -181,12 +190,6 @@ input#from-rating,
   font-style: italic;
 }
 
-#movie-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
 /* Adjustments for mobile devices */
 @media (max-width: 768px) {
   .row1,
@@ -201,5 +204,8 @@ input#from-rating,
   .movie-form,
   .movies-container {
     max-width: 100%;
+  }
+  .movie {
+    max-width: 100%; /* Full width for movie items on mobile */
   }
 }

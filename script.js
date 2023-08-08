@@ -203,7 +203,7 @@ async function getFilteredMovies(
       document.getElementById("movie-list").innerHTML =
         "No movies found with the given filters.";
     } else {
-      const moviesToShow = data.results.slice(0, 8); // Limiting to show only 8 movies
+      const moviesToShow = data.results.slice(0, 5); // Limiting to show only 5 movies
 
       moviesToShow.forEach(async (movie) => {
         const movieDetails = await getMovieDetails(movie.id);
