@@ -1,6 +1,6 @@
 const apiKey = "b26cb8b43f7f238483f4eef506d29034";
 const tmdbBaseUrl = "https://api.themoviedb.org/3";
-const numRecommendations = 5;
+const numRecommendations = 6;
 
 let isRecommendationMode = true; // Default mode is movie recommendation
 
@@ -168,7 +168,10 @@ function toggleMode() {
       document.getElementById("movie-list").innerHTML = "";
     }
   });
-}
+}    
+
+
+
 
 // Function to apply form filters
 function applyFormFilter() {
@@ -203,7 +206,7 @@ async function getFilteredMovies(
       document.getElementById("movie-list").innerHTML =
         "No movies found with the given filters.";
     } else {
-      const moviesToShow = data.results.slice(0, 5); // Limiting to show only 5 movies
+      const moviesToShow = data.results.slice(0, 6); // Limiting to show only 5 movies
 
       moviesToShow.forEach(async (movie) => {
         const movieDetails = await getMovieDetails(movie.id);
@@ -238,3 +241,5 @@ function initializeApp() {
 
 // Call the initializeApp function when the page loads
 initializeApp();
+
+

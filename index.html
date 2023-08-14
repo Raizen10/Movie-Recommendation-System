@@ -14,7 +14,8 @@
         <option value="form-filter">Form Filter</option>
       </select>
     </div>
-    <div class="searchh">
+    
+    <div class="searchh" style="display:flex;">
       <div id="searchContainer">
         <input type="text" id="inputMovie" placeholder="Enter a movie title" />
         <button type="button" id="searchButton">
@@ -22,16 +23,12 @@
         </button>
       </div>
     </div>
+    
     <main>
       <div id="recommendedMovies" class="movies-container"></div>
 
-      <div id="formFilterContainer">
-        <form
-          id="movie-form"
-          class="movie-form"
-          method="post"
-          onsubmit="return false;"
-        >
+      <div id="formFilterContainer" style="display: none;">
+        <form id="movie-form" class="movie-form" method="post" onsubmit="return false;">
           <div class="row1">
             <div class="genre">
               <label for="genre">Genre:</label>
@@ -51,56 +48,22 @@
               </div>
             </div>
             <div class="year">
-              <label for="from-year">Year:</label>
-              <input
-                type="number"
-                id="from-year"
-                name="from-year"
-                min="1950"
-                max="2023"
-                placeholder="1950"
-                required
-              />
-              <label for="to-year">to</label>
-              <input
-                type="number"
-                id="to-year"
-                name="to-year"
-                min="1950"
-                max="2023"
-                placeholder="2023"
-                required
-              />
-            </div>
-            <div class="rating">
-              <label for="from-rating">Rating:</label>
-              <input
-                type="number"
-                id="from-rating"
-                name="from-rating"
-                min="1"
-                max="10"
-                placeholder="1"
-                required
-              />
-              <label for="to-rating">to</label>
-              <input
-                type="number"
-                id="to-rating"
-                name="to-rating"
-                min="1"
-                max="10"
-                placeholder="10"
-                required
-              />
-            </div>
+            <label for="from-year">Year:</label> 
+            <input type="number" id="from-year" name="from-year" min="1950" max="2023" placeholder="1950" required>
+            <label for="to-year">to</label>
+            <input type="number" id="to-year" name="to-year" min="1950" max="2023" placeholder="2023" required>
           </div>
-          <div class="row2">
-            <div class="buttons">
-              <button type="reset" id="reset" name="reset">Reset</button>
-              <button type="button" id="applyFilter" class="submit">
-                Apply
-              </button>
+          <div class="rating">
+            <label for="from-rating">Rating:</label>
+            <input type="number" id="from-rating" name="from-rating" min="1" max="10" placeholder="1" required>
+            <label for="to-rating">to</label>
+            <input type="number" id="to-rating" name="to-rating" min="1" max="10" placeholder="10" required>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="buttons">
+            <button type="reset" id="reset" name="reset">Reset</button>
+            <button type="button" id="applyFilter" class="submit">Apply</button>
             </div>
           </div>
         </form>
